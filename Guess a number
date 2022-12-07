@@ -1,0 +1,121 @@
+# Python-repository
+Here i will post my all codes of python exercise
+
+# Guess a number
+#Create no of guesses= 9
+# print no of guesses left
+# no of guesses he took to finish
+# game over
+
+x=18
+num_of_guesses=1
+print("num of guesses is limited to only 9 times: ")
+while (num_of_guesses<=9):
+    guess_num= int(input("Guess the no.:\n"))
+    if guess_num<18:
+        print("u enter less no. please input greater no.\n")
+    elif guess_num>18:
+        print("u enter greater no. please input smaller no.\n")
+    else:
+        print("u won\n")
+        print(num_of_guesses, "no. of guesses he took to finish")
+        break
+    print(9-num_of_guesses,"no. of guesses left")
+    num_of_guesses=num_of_guesses+1
+
+if(num_of_guesses>9):
+    print("game over")
+    def game(step):
+    x=1
+    life=4
+    ran=18
+    print("ur life:5")
+    put = int(input(f"Guess a no. 1 to {step}:"))
+    if put== ran:
+        print(f"\n\tYOU WIN in {x} attems")
+    else:
+        while life!=0:
+
+            if put == ran:
+                print(f"\n\tYOU WIN in {x} attems")
+                break
+            else:
+                if put<ran:
+                    print(f"Too low ans      (life:{life})")
+                else:
+                    print(f"Too high ans      (life:{life})")
+                put=int(input("guess again: "))
+                life=1
+                z+=1
+            if life==0:
+                print("u r loser\n\t\tGame Over")
+                break
+        replay=input("Do u want to play again[y/n]:")
+        if replay=="y":
+            game(50)
+        else:
+            print('thanks for playing.')
+
+
+if__name__ == '__main__'
+    game(50)
+    
+#Method 3
+a=18
+for i in range (1,10):
+    n=int(input("guess the no."))
+    if i<9 or n==18:
+        if n<a:
+            print("u posted the wrong no.")
+            print("please increase the no.")
+            print("no. of remanining guesses:", 9-i)
+        elif n>a:
+            print("u posted the wrong no.")
+            print("please decrease the no.")
+            print("no. of remanining guesses:", 9-i)
+        else:
+            print("Congratulation!")
+            print("U guessed right no.")
+            print("no. of remanining guesses:", 9 - i)
+            break
+    else:
+        print("u guessed the wrong no.")
+        print("no. of remaining guesses:", 9-i)
+        print("game over!")
+
+#Method 4
+method 4
+# n=8
+# left =4
+# print("u have 5 chance to guess correct no.")
+# for i in range (5):
+#     x=int(input("guess a no. btw 1 to 10 :-\n"))
+#     if x>n:
+#         print("no. is less than", x)
+#         print("left chance = ", left - i)
+#     if x<n:
+#         print("no. is greater than", x)
+#         print("left chance= ", left-i)
+#     if x==n:
+#         print("u win")
+#         print("total attempt =", i+1)
+#         exit()
+
+
+#Method 5
+mynum = 18
+count = 0
+print("Enter your number:")
+while(True):
+    count = count+1
+    if (count > 5):
+        print("You have Exceeded number of try!! Game Over")
+        break
+    val = int(input())
+    if val == mynum:
+        print("You won!!","Correct number is:",mynum)
+        break
+    elif(val>mynum):
+        print("decrease the number-","Guess left",5-count)
+    else:
+        print("increase the number","Guess left",5-count)
